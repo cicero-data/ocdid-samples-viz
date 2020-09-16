@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="icon" href="/favicon.ico"/>
+<title>OCD-ID Samples</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+
+	html {
+  		box-sizing: border-box;
+	}
+
+	body {
+	  margin: 0;
+	  padding: 0;
+	  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+	    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	  background-color: #fff;
+	  line-height: 1.35;
+	  font-size: 14px;
+	}
+
+	html,
+	body {
+	  height: 100%;
+	}
+
+	
+
+	#map {
+	  position: absolute;
+	  top: 13vh;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	}
+
+	.App-header {
+	  background-color: #365077;
+	  min-height: 13vh;
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	  justify-content: space-between;
+	  padding: 0px 40px;
+	  color: #fff;
+	}
+
+	a { text-decoration: none;
+		color: #fff;
+	}
+
+	.header-title {
+		font-size: calc(10px + 2vmin);
+	}
+
+	.header-subtitle {
+		font-size: calc(3px + 2vmin);
+	}
+	
+	.mapboxgl-popup {
+	max-width: 400px;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+	    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-size: 14px;
+	}
+
+</style>
+</head>
+<body>
+
+<div class='App-header'>
+	<div class="header-left">
+		<div class="header-title">
+	        Open Civic Data Identifiers Samples
+	    </div>
+
+	    <div class="header-subtitle">
+	    	An open data standard for defining the structure of representative government    
+	    </div>
+	</div>
+	<div class="header-right">
+	    <div class="header-subtitle">
+	        <a href="https://cicerodata.com" target="_blank">Visit cicerodata.com</a>
+	    </div>
+	    <div class="header-subtitle">
+	        <a href="https://opencivicdata.readthedocs.io/en/latest/ocdids.html" target="_blank">Read the Open Civic Data Identifiers Docs</a>
+	    </div>
+	</div>
+</div>
+
+<div id="map"></div>
+ 
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibHVrZW1ja2luc3RyeSIsImEiOiJjajU0ODRsNmMwMHg2MndxeWsxMXhpY3k5In0.yM_-IJxaryqd9i5Rt6k8LA';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/lukemckinstry/ckeyb01ig0rkg1apl0fpa7qg1',
+		center: [-103.59179687498357, 40.66995747013945],
+		zoom: 3,
+		minZoom: 2,
+        maxZoom: 11,
+	});
+
+	var nav = new mapboxgl.NavigationControl({
+        showCompass: false,
+        showZoom: true
+      });
+
+    map.addControl(nav, "top-left");
+ 
+
+</script>
+</body>
+</html>
+
